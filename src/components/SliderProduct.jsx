@@ -28,11 +28,17 @@ class SectionProducts extends Component{
     render(){
         const settings = {
             dots: true,
-            infinite: false,
+            nav: false,
+            infinite: true,
             speed: 500,
             slidesToShow: 4,
             slidesToScroll: 1,
             initialSlide: 0,
+            autoplay: true,
+            speed: 1000,
+            autoplaySpeed: 5000,
+            cssEase: "linear",
+            arrows: false,
             responsive: [
                 {
                     breakpoint: 1200,

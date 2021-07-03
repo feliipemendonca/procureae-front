@@ -1,13 +1,13 @@
 import React,{useState} from 'react'
-import { Navbar, Container, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink } from 'reactstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { Navbar, Container, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
+import GrandMenu from '../components/GrandMenu'
 import Img from '../assets/images/logo.png'
 import styled from 'styled-components'
 
 
 const NavHeader = styled(Navbar)`
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 7%);
+    z-index: 1;
 `
 
 const Brand = styled(NavbarBrand)`
@@ -31,17 +31,18 @@ const Header = () =>{
 
     return (
         <>
-            <NavHeader fixed="fixed" expand="lg">
+            <NavHeader fixed="fixed" className="bg-white w-100 position-fixed" expand="false">
                 <Container>
                     <Brand href="/">
                         <img src={Img} className="img-fluid pt-3" alt="Procureaê" />
                     </Brand>
-                    <NavbarToggler />
-                    <Collapse isOpen={isOpen} navbar className="d-none d-lg-flex justify-content-end">
-                        <Nav className="mr-auto" navbar>
-                            <Links />
-                        </Nav>
-                    </Collapse>
+                    <Nav className="mr-auto d-flex justify-content-between">
+                        <Links/>
+                        <NavItem className="d-flex align-items-center">
+                             <GrandMenu className />
+                        </NavItem>
+                    </Nav>
+                   
                 </Container>
             </NavHeader>
         </>
@@ -51,27 +52,22 @@ const Header = () =>{
 const Links = () =>{
     return(
         <>
-            <NavItem>
+            <NavItem className="d-none d-md-block">
                 <Link href="/">Home</Link>
             </NavItem>
-            <NavItem>
+            <NavItem className="d-none d-md-block">
                 <Link href="/">Comprar</Link>
             </NavItem>
-            <NavItem>
+            <NavItem className="d-none d-md-block">
                 <Link href="/">Vender</Link>
             </NavItem>
-            <NavItem>
+            <NavItem className="d-none d-md-block">
                 <Link href="/">Ajuda</Link>
             </NavItem>
-            <NavItem>
+            <NavItem className="d-none d-md-block">
                 <Link href="/">Entrar</Link>
             </NavItem>
-            <NavItem>
-                <Link>
-                    <FontAwesomeIcon icon={faBars} />
-                </Link>
-                
-            </NavItem>
+                {/* <GrandMenu /> */}
         </>
     )
 }
