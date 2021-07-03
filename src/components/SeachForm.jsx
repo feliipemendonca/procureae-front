@@ -37,8 +37,8 @@ const SeachForm = () => {
         <Section>
             <Container className="py-5">
                 <Text className="pt-5 pb-2">
-                    <h3 className="text-center pt-4"><strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </strong></h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non repellendus necessitatibus voluptates hic. </p>
+                    <h3 className="text-center pt-4"><strong>Tudo pra facilitar seu dia a dia</strong></h3>
+                    <p>O que você precisa está aqui. Peça e receba onde estiver.</p>
                 </Text>
                 <FormSeach className="d-flex justify-content-center">
                     <Input type="seach" placeholder="Procureaê" className="rounded-fill" />

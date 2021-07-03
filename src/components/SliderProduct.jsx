@@ -30,7 +30,6 @@ class SectionProducts extends Component{
             dots: true,
             nav: false,
             infinite: true,
-            speed: 500,
             slidesToShow: 4,
             slidesToScroll: 1,
             initialSlide: 0,
